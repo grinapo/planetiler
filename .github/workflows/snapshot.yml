@@ -5,7 +5,7 @@ name: Publish a Snapshot
 
 on:
   push:
-    branches: [ main ]
+    branches: [ tracktype ]
   workflow_dispatch:
     inputs:
       image_tags:
