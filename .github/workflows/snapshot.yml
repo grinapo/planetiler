@@ -46,11 +46,11 @@ jobs:
       with:
         name: planetiler-build
         path: planetiler-dist/target/*with-deps.jar
-    - run: ./scripts/push-release.sh
-      env:
-        GITHUB_ACTOR: ${{ github.actor }}
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        IMAGE_TAGS: ${{ github.event_name == 'workflow_dispatch' && github.event.inputs.image_tags || 'latest,snapshot' }}
-        MAVEN_USERNAME: ${{ secrets.OSSRH_USERNAME }}
-        MAVEN_PASSWORD: ${{ secrets.OSSRH_PASSWORD }}
-        OSSRH_GPG_SECRET_KEY_PASSWORD: ${{ secrets.OSSRH_GPG_SECRET_KEY_PASSWORD }}
+#    - run: ./scripts/push-release.sh
+#      env:
+#        GITHUB_ACTOR: ${{ github.actor }}
+#        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+#        IMAGE_TAGS: ${{ github.event_name == 'workflow_dispatch' && github.event.inputs.image_tags || 'latest,snapshot' }}
+#        MAVEN_USERNAME: ${{ secrets.OSSRH_USERNAME }}
+#        MAVEN_PASSWORD: ${{ secrets.OSSRH_PASSWORD }}
+#        OSSRH_GPG_SECRET_KEY_PASSWORD: ${{ secrets.OSSRH_GPG_SECRET_KEY_PASSWORD }}
